@@ -16,11 +16,6 @@ connectDB();
 
 const app = express();
 
-// Entry Route
-app.use('/', (req, res) => {
-    res.status(200).json('Use /api/auth or refresh or blogs or user prefix to access routes.')
-});
-
 // Middleware
 app.use("/images", express.static(path.join(__dirname, "..", "frontend", "public", "images")));
 app.use(express.json());
