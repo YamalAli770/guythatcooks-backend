@@ -2,7 +2,6 @@ const express = require('express');
 require('dotenv').config();
 const path = require('path');
 const port = process.env.PORT || 4000;
-const colors = require('colors');
 const fileUpload = require('express-fileupload');
 const connectDB = require('./config/db');
 const errorHandler = require('./middleware/errorMiddleware');
