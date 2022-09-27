@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors')
 require('dotenv').config();
 const path = require('path');
 const port = process.env.PORT || 4000;
@@ -17,6 +18,9 @@ connectDB();
 const app = express();
 
 // Middleware
+app.use(cors({
+    origin: 'https://guythatcooks.netlify.app/'
+}));
 app.use("/images", express.static(path.join(__dirname, "..", "frontend", "public", "images")));
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
