@@ -19,6 +19,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
+    origin: "https://guythatcooks.netlify.app",
     credentials: true,
 }));
 app.use("/images", express.static(path.join(__dirname, "..", "frontend", "public", "images")));
